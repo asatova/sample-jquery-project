@@ -1,0 +1,106 @@
+.anniversary {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(10, 5, 5, 0.850989);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+.anniversary__content {
+  text-align: center;
+  background-size: cover;
+  position: relative;
+  height: 45vh;
+}
+.anniversary__content::after,
+.anniversary__content::before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 105%;
+  height: 105%;
+  left: 0;
+  bottom: 0;
+}
+.anniversary__content::before {
+  border: 2px solid #FFFFFF;
+  -webkit-transform: rotate(8deg);
+          transform: rotate(8deg);
+  z-index: 1;
+}
+.anniversary__content::after {
+  border: 2px solid #FF0000;
+  -webkit-box-shadow: 0px 2px 30px rgba(255, 0, 0, 0.5);
+          box-shadow: 0px 2px 30px rgba(255, 0, 0, 0.5);
+  -webkit-transform: matrix(-1, -0.03, -0.03, 1, 0, 0);
+          transform: matrix(-1, -0.03, -0.03, 1, 0, 0);
+  z-index: 0;
+}
+.anniversary__img {
+  height: 100%;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+.anniversary__close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 17px;
+  top: 20px;
+  cursor: pointer;
+  z-index: 5;
+}
+.anniversary__btn {
+  background: #fff;
+  font-family: 'Gilroy Bold';
+  font-size: 16px;
+  padding: 15px 50px;
+  color: #FF0000;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0;
+  position: relative;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  z-index: 5;
+}
+@media (max-width: 1580.98px) {
+  .anniversary__btn {
+    font-size: 12px;
+    padding: 11px 35px;
+  }
+}
+@media (max-width: 455.98px) {
+  .anniversary__content {
+    height: auto;
+    width: 80vw;
+  }
+  .anniversary__img {
+    height: auto;
+  }
+}
